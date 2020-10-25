@@ -14,6 +14,8 @@
           <th class="text-center">Name</th>
           <th class="text-center">Phone No.</th>
           <th class="text-center">Email</th>
+          <th class="text-center"></th>
+          <th class="text-center"></th>
         </tr>
 
         <% for(let count=0;count<ContactList.length;count++){%>
@@ -21,6 +23,14 @@
                 <td class="text-center"><%=ContactList[count].name%></td>
                 <td class="text-center"><%=ContactList[count].number%></td>
                 <td class="text-center"><%=ContactList[count].email%></td>
+
+                <td class="text-center">
+                  <a href="/contact-list/edit/<%=ContactList[count]._id%>" class="btn btn-primary btn-sm">
+                  <i class="fas fa-pencil-alt"></i>Edit</a></td>
+                <td class="text-center">
+                  <a href="/contact-list/delete/<%=ContactList[count]._id%>" class="btn btn-danger btn-sm">
+                  <i class="fas fa-trash-alt"></i>Delete</a>
+                </td>
             </tr>
             
             

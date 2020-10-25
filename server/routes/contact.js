@@ -74,7 +74,7 @@ router.post("/edit/:id", (req, res, next) => {
     number: req.body.number,
     email: req.body.email,
   });
-  Contact.updateOne({ __id: id }, updatedContact, (err) => {
+  Contact.updateOne({ _id: id }, updatedContact, (err) => {
     if (err) {
       console.log(err);
       res.end(err);
@@ -88,7 +88,7 @@ router.post("/edit/:id", (req, res, next) => {
 router.get("/delete/:id", (req, res, next) => {
   let id = req.params.id;
 
-  Contact.remove({ __id: id }, (err) => {
+  Contact.remove({ _id: id }, (err) => {
     if (err) {
       console.log(err);
       res.end(err);
