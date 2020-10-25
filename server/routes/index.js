@@ -26,8 +26,8 @@ router.get("/projects", function (req, res, next) {
 });
 
 /* GET Contact us page. */
-router.get("/contact", function (req, res, next) {
-  res.render("contact", { title: "Contact" });
+router.get("/contacts", function (req, res, next) {
+  res.render("contacts", { title: "Contact" });
 });
 
 /* GET Contact us page. */
