@@ -10,11 +10,15 @@ let Contact = require("../models/contact");
 
 //get route for Contact List Page -READ opeartion
 router.get("/", (req, res, next) => {
-  Contact.find((err, ContactList) => {
+  Contact.find((err, contactList) => {
     if (err) {
       return console.error(err);
     } else {
-      console.log(ContactList);
+      //console.log(ContactList);
+      res.render("contact", {
+        title: "contact-list",
+        ContactList: contactList,
+      });
     }
   });
 });

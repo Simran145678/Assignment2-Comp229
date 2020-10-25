@@ -1,53 +1,30 @@
-<%- include partials/header.ejs %> 
-<%- include partials/main_nav.ejs %>
-  
+<%- include partials/header.ejs %> <%- include partials/main_nav.ejs %>
 
- 
+<main class="container">
+  <div class="row">
+    <div class="col-md-offset-4 col-md-6">
+      <h1><%=title%></h1>
+      <br />
+      <table class="table bordered table-striped table-hover">
+        <tr>
+          <th class="text-center">Name</th>
+          <th class="text-center">Phone No.</th>
+          <th class="text-center">Email</th>
+        </tr>
 
-  <main>
-    <div class="container" style="align-items: center;">
-  
-        <h1 class="display-4">Contact Me</h1>   
-        <hr>
-        
-        <form>
-          <div class="form-row">
-            <div class="form-group col-md-6">
-              <label for="firstName">First Name</label>
-              <input type="text" class="form-control" id="firstName" aria-describedby="firstName"
-              placeholder="Enter your First Name" required>
-            </div>
-            <div class="form-group col-md-6">
-              <label for="lastName">Last Name</label>
-              <input type="text" class="form-control" id="lastName" aria-describedby="lasttName"
-              placeholder="Enter your Last Name" required>
-            </div>
-          </div>
-
-          
-          <div class="form-group">
-            <label for="emailAddress">Email address</label>
-            <input type="email" class="form-control" id="emailAddress" aria-describedby="emailAddress"
-            placeholder="Enter your Email" required>
-          </div>
-           <div class="form-group">
-            <label for="contactNumber">Contact Number</label>
-            <input type="tel" class="form-control" id="contactNumber" aria-describedby="contactNumber"
-            placeholder="Enter your Contact Number" required>
-           </div>
-          
-         
-         
-          <button   class="btn btn-primary" id="SubmitButton" onclick="window.location.href='/home'"><i class="fas fa-share-square"></i> Submit</button> </a>         
-          <button type="reset" class="btn btn-warning" id="resetButton"><i class="fas fa-undo"></i> Reset</button>          
-
-        </form>
+        <% for(let count=0;count<ContactList.length;count++){%>
+            <tr>
+                <td class="text-center"><%=ContactList[count].name%></td>
+                <td class="text-center"><%=ContactList[count].number%></td>
+                <td class="text-center"><%=ContactList[count].email%></td>
+            </tr>
+            
+            
+            
+            <%}%>
+      </table>
     </div>
-    
+  </div>
+</main>
 
-  </main>
-  <br>
-  <br>
-
-  <%- include partials/bottom_nav.ejs %>
- <%- include partials/footer.ejs %>
+<%-include partials/bottom_nav.ejs %> <%- include partials/footer.ejs %>
