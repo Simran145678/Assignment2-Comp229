@@ -9,7 +9,7 @@
   <div class="row">
     <div class="offset-md-4 col-md-4">
       <h1>Please Register</h1>
-      <form action="" method="POST" autocomplete="off">
+      <form method="POST" autocomplete="off">
         <fieldset class="form-group">
           <label for="username"> Username: </label
           ><input
@@ -35,8 +35,32 @@
           />
         </fieldset>
 
+        <fieldset class="form-group">
+          <label for="email"> Email: </label
+          ><input
+            type="email"
+            class="form-control"
+            name="email"
+            placeholder="Enter email"
+            id="email"
+            required
+          />
+        </fieldset>
+
+        <fieldset class="form-group">
+          <label for="displayName"> Email: </label
+          ><input
+            type="text"
+            class="form-control"
+            name="displayName"
+            placeholder="Enter displayName"
+            id="displayName"
+            required
+          />
+        </fieldset>
+
         <fieldset class="form-group text-right">
-          <input type="submit" class="btn btn-success" value="Login" />
+          <input type="submit" class="btn btn-success" value="Register" />
           <a href="/">
             <input type="button" class="btn btn-warning" value="cancel" />
           </a>
