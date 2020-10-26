@@ -15,6 +15,7 @@ module.exports.displayContactList = (req, res, next) => {
       res.render("contact/list", {
         title: "contact-list",
         ContactList: contactList,
+        displayName: req.user ? req.user.displayName : "",
       });
     }
   });
@@ -22,7 +23,8 @@ module.exports.displayContactList = (req, res, next) => {
 
 module.exports.displayAddPage = (req, res, next) => {
   res.render("contact/add", {
-    title: "contact-list",
+    title: "Add Contact",
+    displayName: req.user ? req.user.displayName : "",
   });
 };
 
@@ -53,6 +55,7 @@ module.exports.displayEditPage = (req, res, next) => {
       res.render("contact/edit", {
         title: "Edit Contact",
         Contact: contactToEdit,
+        displayName: req.user ? req.user.displayName : "",
       });
     }
   });

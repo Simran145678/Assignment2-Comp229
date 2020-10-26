@@ -53,7 +53,7 @@ app.use(
 );
 
 //initialize flash
-app.use(flash);
+app.use(flash());
 
 //initialize passport
 app.use(passport.initialize());
