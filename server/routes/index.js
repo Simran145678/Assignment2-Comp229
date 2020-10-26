@@ -20,18 +20,18 @@ router.get("/projects", indexController.displayProjectsPage);
 router.get("/contacts", indexController.displayContactPage);
 
 //Get route for displaying login Page
-router.get("/login", contactController.displayAddPage);
+router.get("/login", indexController.displayLoginPage);
 
 //POST route for processing login Page
-router.post("/login", contactController.processAddPage);
+router.post("/login", indexController.processLoginPage);
 
 //Get route for displaying register page
-router.get("/register", contactController.displayAddPage);
+router.get("/register", indexController.displayRegisterPage);
 
 //POST route for processing register page
-router.post("/register", contactController.processAddPage);
+router.post("/register", indexController.processRegisterPage);
 
 //get route to perform logout
-router.get("/logout", contactController.performDelete);
+router.get("/logout", indexController.performLogout);
 
 module.exports = router;
